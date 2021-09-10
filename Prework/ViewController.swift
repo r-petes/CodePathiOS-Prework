@@ -8,18 +8,62 @@
 import UIKit
 
 class ViewController: UIViewController {
-    @IBOutlet weak var billAmountTextField: UITextField!
+  
+    
+    @IBOutlet weak var billAmountTextField: UILabel!
     @IBOutlet weak var tipAmountLabel: UILabel!
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
+    var numberOnScreen = ""
+    var defaultTip = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if defaultTip == "18" {
+            tipControl.selectedSegmentIndex = 1
+        }
+        
+        if defaultTip == "20" {
+            tipControl.selectedSegmentIndex = 2
+        }
+        
+        tipCalculations()
     }
+    
+    
+   
+    @IBAction func inputNumbers(_ sender: UIButton) {
+        
+        if sender.tag == 10 {
+            numberOnScreen += "."
+        }
+        
+        else if sender.tag == 11 {
+            numberOnScreen = ""
+        }
+        
+        else {
+            numberOnScreen += String(sender.tag)
+        }
 
+        billAmountTextField.text = numberOnScreen
+        tipCalculations()
+        
+    }
+    
+    
+    
+    
+    
     @IBAction func calculateTip(_ sender: Any) {
-        // Get bill amoutn from text field input
+        tipCalculations()
+
+    }
+    
+    
+    func tipCalculations() {
+      // Get bill amoutn from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
         
         // Get Total tip by multiplying tip * tipPercentage
@@ -33,6 +77,5 @@ class ViewController: UIViewController {
         // Update Total Amount
         totalLabel.text = String(format: "$%.2f", total)
     }
-    
 }
 

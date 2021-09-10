@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0BA6784126EC034300550A76 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BA6784026EC034300550A76 /* SecondViewController.swift */; };
 		0BB287A326EAA1370066E32C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB287A226EAA1370066E32C /* AppDelegate.swift */; };
 		0BB287A526EAA1370066E32C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB287A426EAA1370066E32C /* SceneDelegate.swift */; };
 		0BB287A726EAA1370066E32C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BB287A626EAA1370066E32C /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0BA6784026EC034300550A76 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		0BB2879F26EAA1370066E32C /* Prework.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Prework.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0BB287A226EAA1370066E32C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0BB287A426EAA1370066E32C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				0BB287A226EAA1370066E32C /* AppDelegate.swift */,
 				0BB287A426EAA1370066E32C /* SceneDelegate.swift */,
+				0BA6784026EC034300550A76 /* SecondViewController.swift */,
 				0BB287A626EAA1370066E32C /* ViewController.swift */,
 				0BB287A826EAA1370066E32C /* Main.storyboard */,
 				0BB287AB26EAA1390066E32C /* Assets.xcassets */,
@@ -258,6 +261,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0BA6784126EC034300550A76 /* SecondViewController.swift in Sources */,
 				0BB287A726EAA1370066E32C /* ViewController.swift in Sources */,
 				0BB287A326EAA1370066E32C /* AppDelegate.swift in Sources */,
 				0BB287A526EAA1370066E32C /* SceneDelegate.swift in Sources */,
