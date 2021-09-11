@@ -8,15 +8,18 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    
+    var selectedTip = ""
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
-    
+
     @IBAction func selectDefaultTip(_ sender: UIButton) {
-        var selectedTip = "15"
+        selectedTip = "15"
         
         
         if sender.tag == 18 {
@@ -25,16 +28,27 @@ class SecondViewController: UIViewController {
         
         if sender.tag == 20 {
             selectedTip = "20"
+            
+            performSegue(withIdentifier: "ShowDetail", sender: sender)
         }
-        
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
-        vc.defaultTip = selectedTip
-        self.navigationController?.pushViewController(vc, animated: true)
-
         
     }
     
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "ShowDetail" {
+            if let ViewController = segue.destination as? ViewController {
+            if selectedTip == "18" {
+                ViewController.defaultTip = "18"
+            }
+            if selectedTip == "20" {
+                ViewController.defaultTip = "20"
+            }
+            
+                
+        }
+    }
+    }
 }
+
 
 

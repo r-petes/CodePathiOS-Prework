@@ -15,25 +15,21 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipControl: UISegmentedControl!
     @IBOutlet weak var totalLabel: UILabel!
     var numberOnScreen = ""
-    var defaultTip = ""
+    var defaultTip = "15"
+    
+    
+    // Actually update the screen when tip default is changed
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        if defaultTip == "18" {
-            tipControl.selectedSegmentIndex = 1
-        }
         
-        if defaultTip == "20" {
-            tipControl.selectedSegmentIndex = 2
-        }
-        
-        tipCalculations()
     }
     
     
-   
+    
     @IBAction func inputNumbers(_ sender: UIButton) {
+    
         
         if sender.tag == 10 {
             numberOnScreen += "."
@@ -53,9 +49,6 @@ class ViewController: UIViewController {
     }
     
     
-    
-    
-    
     @IBAction func calculateTip(_ sender: Any) {
         tipCalculations()
 
@@ -63,7 +56,7 @@ class ViewController: UIViewController {
     
     
     func tipCalculations() {
-      // Get bill amoutn from text field input
+      // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
         
         // Get Total tip by multiplying tip * tipPercentage
