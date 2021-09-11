@@ -27,6 +27,13 @@ class ViewController: UIViewController {
     }
     
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        print("view will appear")
+        // This is a good place to retrieve the default tip percentage from UserDefaults
+        // and use it to update the tip amount
+    }
+    
     
     @IBAction func inputNumbers(_ sender: UIButton) {
     
