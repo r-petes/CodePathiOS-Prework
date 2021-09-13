@@ -29,7 +29,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of my prework thus far. I have created but not fully implemented the settings page yet. 
 
-<img src='https://imgur.com/a/TLT3Jxg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/TLT3Jxg.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 ## Notes
